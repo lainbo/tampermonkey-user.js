@@ -452,7 +452,7 @@
    * @returns {string} tweetText
    */
   function handleTweetText(tweetText, folded) {
-    const MAX_TWEET_WEIGHT = 280;
+    const MAX_TWEET_WEIGHT = 440;
     const MAX_TWEET_LINES = 15;
     const isLight = cp => cp <= 0x10FF || (cp >= 0x2000 && cp <= 0x200D) || (cp >= 0x2010 && cp <= 0x201F) || (cp >= 0x2032 && cp <= 0x2037);
     const isWordChar = token => token?.weight === 1 && /^[\p{L}\p{N}]/u.test(token.text);
