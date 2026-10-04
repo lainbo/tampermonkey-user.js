@@ -23,7 +23,19 @@
 
   /**
    * Change Log
-   * 
+   *
+   * Version 0.4.8(2026-10-03)
+   *  - Count length by X's official rule (twitter-text v3): a URL counts 23, an emoji sequence is counted as a whole (weight 2), and the same count is used for both checking and cutting.
+   *  - Raise the limit from 280 to 440 (about 220 CJK characters, or 440 Latin characters).
+   *  - Cut at a line break or sentence-ending punctuation first, fall back to a space.
+   *  - Line limit changes from "10 lines, blank lines included" to "15 lines, only non-empty lines".
+   *  - Add the ellipsis only when content is actually missing. Tweets folded by X ("Show more") count as missing too.
+   *  - Fix the extra "…" after long links, the handling of 3+ consecutive newlines, and the failed mark not being cleared.
+   *
+   * Version 0.4.7(2026-09-18)
+   *  - Unify userscript metadata: English @name with @name:zh-CN, add @description:zh-CN, @license, @homepageURL.
+   *  - Point GitHub URLs at GinWU05.
+   *
    * Version 0.4.6(2024-09-19)
    *  - fix dark mode style
    *
